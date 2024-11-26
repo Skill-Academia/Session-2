@@ -1,5 +1,5 @@
 {
-  "name": "lecture-17",
+  "name": "lecture-19",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-router": "^1.82.2",
+    "@tanstack/router-plugin": "^1.81.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
