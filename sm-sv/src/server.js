@@ -1,6 +1,8 @@
 require("dotenv").config();
 const express = require("express");
 const db = require("./db");
+const cors = require("cors");
+const path = require("path");
 
 const userRoute = require("./routes/user.route");
 const postRoute = require("./routes/post.route");
@@ -10,7 +12,14 @@ const PORT = process.env.PORT || 8090;
 
 const app = express();
 
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
 app.use(express.json());
+app.use("/files", express.static(path.join(__dirname, "../files")));
 
 app.get("/health", (_, res) => {
   return res.json({ status: "OK" });

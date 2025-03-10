@@ -19,7 +19,7 @@ const User = db.define(
     },
     image: { type: DataTypes.TEXT, allowNull: false },
     bio: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
     },
     followers: {
       type: DataTypes.ARRAY(DataTypes.INTEGER),

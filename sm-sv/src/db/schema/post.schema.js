@@ -20,6 +20,9 @@ const Post = db.define(
     },
     text: {
       type: DataTypes.TEXT,
+    },
+    image: {
+      type: DataTypes.TEXT,
       allowNull: false,
     },
   },
